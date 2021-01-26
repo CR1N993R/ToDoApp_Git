@@ -5,7 +5,6 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import sun.jvm.hotspot.utilities.Observable;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -23,6 +22,10 @@ public class Tasks {
         saveTasks();
     }
 
+    /**
+     *
+     * @param task
+     */
     public static void removeTask(Task task){
         taskList.remove(task);
         saveTasks();

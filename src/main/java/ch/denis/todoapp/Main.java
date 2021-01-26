@@ -1,5 +1,6 @@
 package ch.denis.todoapp;
 
+import ch.denis.todoapp.frontend.UiManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,13 +11,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
-        Parent loginFormRoot = FXMLLoader.load(getClass().getResource("LoginForm.fxml"));
-        Scene loginForm = new Scene(loginFormRoot);
-
-
-        stage.setTitle("Login");
-        stage.setScene(loginForm);
+        UiManager.stage = stage;
         stage.show();
+        UiManager.showLoginScene();
     }
 
 
