@@ -33,6 +33,7 @@ public class EditScene extends CreateScene{
 
     public void delete(ActionEvent actionEvent) {
         Tasks.removeTask(task);
+        Tasks.saveTasks();
         back();
     }
 }

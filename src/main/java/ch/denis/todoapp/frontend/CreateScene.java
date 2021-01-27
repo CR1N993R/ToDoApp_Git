@@ -40,6 +40,7 @@ public class CreateScene extends Controller{
         if (allValuesSet()){
             Task currentTask = new Task(taskname.getText(), taskdescription.getText(), duedate.getValue(), combobox.getSelectionModel().getSelectedItem(), category.getText());
             Tasks.addTask(currentTask);
+            Tasks.saveTasks();
             back();
         }
     }
